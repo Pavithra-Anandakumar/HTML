@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking</title>
+    <style>
+        body {
+            background-color: #3b2929;
+            color: beige;
+            font-size: 20px;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .seat {
+            height: 40px;
+            width: 40px;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border: 1px solid gray;
+            margin: 2px;
+            cursor: pointer;
+            background-color: lightgray;
+        }
+        .na {
+            background-color: grey;
+        }
+        .selected {
+            background-color: seagreen;
+        }
+        .occupied {
+            background-color: yellow;
+            cursor: not-allowed;
+        }
+        .white {
+            height: 200px;
+            width: 500px;
+            border: 2px solid;
+            border-radius: 20%;
+            background-color: aliceblue;
+            margin: 40px auto 20px auto;
+            box-shadow: 2px 2px 5px white;
+        }
+        .seats {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        .summary {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        Select a Movie:
+        <select name="box" id="box">
+            <option value="">Select</option>
+            <option value="1">King-Kong</option>
+            <option value="2">IT</option>
+            <option value="3">Sweet Home</option>
+            <option value="4">All of us are dead</option>
+        </select>
+    </form>
+    <div class="white">
+        <!-- <div class="seat na"></div><p>N/A</p>
+        <div class="seat selected"></div><p>Selected</p>
+        <div class="seat occupied"></div><p>Occupied</p> -->
+    </div>
+    <div class="main">
+        <div class="seat na"></div><p>N/A</p>
+        <div class="seat selected"></div><p>Selected</p>
+        <div class="seat occupied"></div><p>Occupied</p>
+    </div>
+    <div class="seats" id="seatsContainer">
+        <!-- Seats will be generated here -->
+    </div>
+    <div class="summary">
+        <p>Selected Seats: <span id="selectedSeats">0</span></p>
+        <p>Total Price: <span id="totalPrice">0</span> Rs/-</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
